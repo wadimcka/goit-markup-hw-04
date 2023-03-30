@@ -180,6 +180,8 @@ body {
   background-color: var(--overlays-color);
   text-align: center;
   padding: 188px 0px;
+
+  background-image: url();
 }
 .hero-conteiner {
   flex-wrap: wrap;
