@@ -177,11 +177,20 @@ body {
 
 /**================= HERO =======================*/
 .hero {
+  max-width: 1440px;
+  height: 600px;
+  margin: 0 auto;
   background-color: var(--overlays-color);
   text-align: center;
   padding: 188px 0px;
 
-  background-image: url();
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/main_page/hero/hero_bg_photo.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .hero-conteiner {
   flex-wrap: wrap;
@@ -211,6 +220,8 @@ body {
 .hero-btn:focus {
   background-color: var(--active-states);
   color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 /* * =============== ADVANTAGES =====================*/
@@ -225,7 +236,21 @@ body {
 .advantages-item {
   flex-basis: calc(100% / 4);
 }
-
+.box-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 264px;
+  height: 112px;
+  background-color: var(--button-bg-color);
+  margin-bottom: 8px;
+}
+.advantages-icon {
+  width: 64px;
+  height: 64px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .advantages-item:not(:last-child) {
   margin-right: var(--card-margin-horizontal);
 }
@@ -302,12 +327,93 @@ body {
 .team-name {
   margin-bottom: 8px;
 }
+.team-text {
+  margin-bottom: 8px;
+}
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: var(--card-margin-horizontal);
+}
+
+.social-item {
+  width: 40px;
+  height: 40px;
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+}
+
+.socisl-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--active-states);
+}
+
+/**================= CUSTOMERS =======================*/
+.customers {
+  padding-top: var(--section-padding-top-);
+  padding-bottom: var(--section-padding-bootom-);
+  text-align: center;
+}
+.customers-list {
+  display: flex;
+  gap: 24px;
+}
+.customers-title {
+  font-size: 36px;
+  line-height: 1.11;
+  margin-bottom: 72px;
+}
+.customers-item {
+  width: 168px;
+  height: 88px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+}
+.customers-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  fill: #8e8f99;
+}
+
+.customers-link:hover,
+.customers-link:focus {
+  fill: var(--active-states);
+}
+
+.customers-item:hover,
+.customers-item:focus {
+  border-color: #404bbf;
+}
+
+.customers-icon {
+  width: 104px;
+  height: 56px;
+}
 
 /**================= FOOTER =======================*/
 .footer {
   background-color: var(--overlays-color);
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.foter-maine-conteiner {
+  display: flex;
 }
 
 .accent-footer {
@@ -327,11 +433,34 @@ body {
 
 .footer-text {
   margin-top: 16px;
+  margin-right: 120px;
   width: 264px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--overlays-scdr-color);
+}
+
+.footer-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 16px;
+}
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: #31d0aa;
+}
+.socisl-icon-footer {
+  width: 24px;
+  height: 24px;
 }
 
 /*?================= PAGE PORTFOLIO ==================*/
@@ -362,6 +491,9 @@ body {
 .btn-portfolio:focus {
   background-color: var(--active-states);
   color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 /**================= NET ========================*/
@@ -378,6 +510,12 @@ body {
   margin-top: 48px;
   margin-left: var(--card-margin-horizontal);
   flex-basis: calc(100% / 3 - var(--card-margin-horizontal));
+}
+
+.examples-item:hover {
+  border: 1px solid #f4f4fd;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .examples-link {
   margin-right: 0px;
