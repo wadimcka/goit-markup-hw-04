@@ -350,11 +350,6 @@ body {
   background-color: #4d5ae5;
 }
 
-.socisl-icon {
-  width: 16px;
-  height: 16px;
-}
-
 .social-link:hover,
 .social-link:focus {
   background-color: var(--active-states);
@@ -398,11 +393,6 @@ body {
 .customers-item:hover,
 .customers-item:focus {
   border-color: #404bbf;
-}
-
-.customers-icon {
-  width: 104px;
-  height: 56px;
 }
 
 /**================= FOOTER =======================*/
