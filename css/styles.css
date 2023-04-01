@@ -76,6 +76,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  color: #434455;
 }
 
 /** CONTEINER==================== */
@@ -91,6 +92,8 @@ body {
 .header-mane {
   padding: 24px 0px;
   border-bottom: 1px solid var(--accent-color);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-conteiner {
@@ -178,7 +181,6 @@ body {
 /**================= HERO =======================*/
 .hero {
   max-width: 1440px;
-  height: 600px;
   margin: 0 auto;
   background-color: var(--overlays-color);
   text-align: center;
@@ -189,9 +191,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .hero-conteiner {
   flex-wrap: wrap;
 }
@@ -244,6 +245,7 @@ body {
   height: 112px;
   background-color: var(--button-bg-color);
   margin-bottom: 8px;
+  border-radius: 4px;
 }
 .advantages-icon {
   width: 64px;
@@ -373,8 +375,6 @@ body {
 .customers-item {
   width: 168px;
   height: 88px;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
 }
 .customers-link {
   display: flex;
@@ -382,28 +382,37 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
-  fill: #8e8f99;
+  color: #8e8f99;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+}
+
+.customers-icon {
+  fill: currentColor;
 }
 
 .customers-link:hover,
 .customers-link:focus {
-  fill: var(--active-states);
+  border-color: var(--active-states);
 }
 
-.customers-item:hover,
-.customers-item:focus {
-  border-color: #404bbf;
+.customers-link:hover > .customers-icon,
+.customers-link:focus > .customers-icon {
+  color: var(--active-states);
 }
 
 /**================= FOOTER =======================*/
 .footer {
+  display: flex;
   background-color: var(--overlays-color);
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
-.foter-maine-conteiner {
+.footer-conteiner {
   display: flex;
+}
+.footer-logo {
+  margin-right: 120px;
 }
 
 .accent-footer {
@@ -423,7 +432,6 @@ body {
 
 .footer-text {
   margin-top: 16px;
-  margin-right: 120px;
   width: 264px;
   font-size: 16px;
   line-height: 1.5;
@@ -431,26 +439,23 @@ body {
   color: var(--overlays-scdr-color);
 }
 
-.footer-title {
+.footer-name {
+  margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.5px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
-  margin-bottom: 16px;
 }
 
 .footer-social-list {
   display: flex;
   gap: 16px;
 }
+
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: #31d0aa;
-}
-.socisl-icon-footer {
-  width: 24px;
-  height: 24px;
 }
 
 /*?================= PAGE PORTFOLIO ==================*/
@@ -473,8 +478,9 @@ body {
   padding: 12px 24px;
   line-height: 1.5;
   color: #4d5ae5;
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--accent-color);
   border-radius: 4px;
+  background-color: var(--button-bg-color);
 }
 
 .btn-portfolio:hover,
@@ -484,10 +490,10 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  border-color: var(--active-states);
 }
 
 /**================= NET ========================*/
-
 .examples-list {
   display: flex;
   list-style: none;
@@ -502,20 +508,24 @@ body {
   flex-basis: calc(100% / 3 - var(--card-margin-horizontal));
 }
 
-.examples-item:hover {
-  border: 1px solid #f4f4fd;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
-}
 .examples-link {
+  display: block;
   margin-right: 0px;
 }
+
 .examples-thumb {
   padding-top: 32px;
   padding-left: 16px;
   padding-bottom: 32px;
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--accent-color);
   border-top: none;
+}
+
+.examples-link:hover > .examples-thumb {
+  border: 1px solid #f4f4fd;
+  border-top: none;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .thumb-title {
